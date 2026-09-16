@@ -1,0 +1,1 @@
+mkdir -p "Work/Лабораторная работа №1!" "Work/Vasianina_A_A"
