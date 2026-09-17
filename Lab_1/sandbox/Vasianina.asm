@@ -1,34 +1,29 @@
 format ELF
 public _start
 
-section '.data' writeable
-    fam db 'Vasianina', 10
-    fam_len = $ - fam
-    name db 'Anastasia', 10
-    name_len = $ - name
-    pat db 'Alecsandrovna', 10
-    pat_len = $ - pat
+name db "Anastasia", 0xA, 0
+surname db "Vasianina", 0xA, 0
+patronymic db "Alecsandrovna", 0xA, 0
 
-section '.text' executable
 _start:
     mov eax, 4
     mov ebx, 1
-    mov ecx, fam
-    mov edx, fam_len
+    mov ecx, surname
+    mov edx, 10
     int 0x80
 
     mov eax, 4
     mov ebx, 1
     mov ecx, name
-    mov edx, name_len
+    mov edx, 10
     int 0x80
 
     mov eax, 4
     mov ebx, 1
-    mov ecx, pat
-    mov edx, pat_len
+    mov ecx, patronymic
+    mov edx, 14
     int 0x80
 
     mov eax, 1
-    xor ebx, ebx
+    mov ebx, 0
     int 0x80
