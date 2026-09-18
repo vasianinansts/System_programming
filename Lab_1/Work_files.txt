@@ -30,7 +30,7 @@ tac 'Text @1' > 'Vasianina_A_A/Result_one'
 mv 'Vasianina_A_A/Result_one' 'Vasianina_A_A/Result_two'
 
 touch 'Лабораторная работа №1!/Result_3'
-cat 'Vasianina_A_A/Text @1' > 'Лабораторная работа №1!/Result_3'
+sudo bash -c "cat 'Vasianina_A_A'/T*" > 'Лабораторная работа №1/Result_3'
 uname -a >> 'Лабораторная работа №1!/Result_3'
 date >> 'Лабораторная работа №1!/Result_3'
 
